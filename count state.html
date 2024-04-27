@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+           var Abc = function count(){
+            function inc(){
+                setCount(count+1)
+                
+            }
+            function dec(){
+                setCount(count-1)
+                
+            }
+            var [count,setCount]=React.useState(0)
+           
+               
+                return <div> 
+                    <h1 id="d4">counter:{count}</h1>
+                       <button onClick={()=>{inc()}}><i class="bi bi-caret-left"></i></button>
+                       
+                       <button onClick={()=>{dec()}}><i class="bi bi-caret-right"></i></button>
+                       </div>
+            }
+            ReactDOM.render( <Abc></Abc>,document.getElementById("d1"))
+      </script>
+     
+      </body>
+      </html>
